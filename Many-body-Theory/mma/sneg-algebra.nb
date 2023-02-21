@@ -1,0 +1,442 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     13394,        434]
+NotebookOptionsPosition[     11820,        399]
+NotebookOutlinePosition[     12157,        414]
+CellTagsIndexPosition[     12114,        411]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.881259629437921*^9, 3.8812596331861763`*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"dafebd6d-ed31-4d7a-9781-375cb545f298"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"<<", "sneg`sneg`"}], ";"}]], "Input",
+ CellLabel->"In[11]:=",ExpressionUUID->"aeb3e827-7287-4ae3-b4d3-9746ef691420"],
+
+Cell[BoxData["\<\"sneg 2.0.3 Copyright (C) 2002-2022 Rok Zitko\"\>"], "Print",
+ CellChangeTimes->{3.8812598842103233`*^9, 3.8812603459657907`*^9},
+ CellLabel->
+  "During evaluation of \
+In[11]:=",ExpressionUUID->"b0a3074b-b514-4f99-a468-3cdbb3f79dea"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"snegfermionoperators", "[", "a", "]"}]], "Input",
+ CellChangeTimes->{{3.881259906172852*^9, 3.881259918992219*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"c788e69c-ea3b-4aaa-a229-1e8c475f78d6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"commutator", "[", 
+  RowBox[{
+   RowBox[{"a", "[", 
+    RowBox[{"CR", ",", "k"}], "]"}], ",", " ", 
+   RowBox[{"a", "[", 
+    RowBox[{"AN", ",", "k"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.881260022071903*^9, 3.881260047133974*^9}, {
+  3.881260090350628*^9, 3.881260122132064*^9}, {3.881260192504984*^9, 
+  3.881260197576191*^9}, {3.881260337668673*^9, 3.8812603408033867`*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"f250fde5-1061-414d-8fa6-6109d1bac013"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "1"}], "+", 
+  RowBox[{"2", " ", 
+   RowBox[{
+    TagBox[
+     StyleBox[
+      TemplateBox[{"a",RowBox[{"k"}],"\"\[Dagger]\""},
+       "Subsuperscript"],
+      ScriptSizeMultipliers->1,
+      ScriptBaselineShifts->{1, 1}],
+     DisplayForm], 
+    StyleBox["\[CenterDot]",
+     FontColor->RGBColor[0, 1, 0]], 
+    TagBox[
+     StyleBox[
+      TemplateBox[{"a",RowBox[{"k"}],"\"\""},
+       "Subsuperscript"],
+      ScriptSizeMultipliers->1,
+      ScriptBaselineShifts->{1, 1}],
+     DisplayForm]}]}]}]], "Output",
+ CellChangeTimes->{
+  3.881260197987673*^9, {3.88126034162582*^9, 3.881260347356555*^9}},
+ CellLabel->"Out[13]=",ExpressionUUID->"b17a6ecc-a53c-4979-a06e-d909af18722e"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"ham", "="}]], "Input",
+ CellChangeTimes->{{3.881260510082428*^9, 
+  3.881260518990983*^9}},ExpressionUUID->"54c5fa98-b885-4336-aaf0-\
+d5babfffb5d3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"commutator", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"a", "[", 
+     RowBox[{"CR", ",", "p"}], "]"}], "~", "nc", "~", 
+    RowBox[{"a", "[", 
+     RowBox[{"AN", ",", "p"}], "]"}]}], ",", 
+   RowBox[{
+    RowBox[{"a", "[", 
+     RowBox[{"CR", ",", 
+      RowBox[{"k", "+", "q"}]}], "]"}], "~", "nc", "~", 
+    RowBox[{"a", "[", 
+     RowBox[{"AN", ",", "k"}], "]"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.881260385411893*^9, 3.8812604591376467`*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"3f3dc7f8-36e6-469b-949f-d30414aac661"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   TagBox[
+    StyleBox[
+     TemplateBox[{"a",RowBox[{"p"}],"\"\[Dagger]\""},
+      "Subsuperscript"],
+     ScriptSizeMultipliers->1,
+     ScriptBaselineShifts->{1, 1}],
+    DisplayForm], 
+   StyleBox["\[CenterDot]",
+    FontColor->RGBColor[0, 1, 0]], 
+   TemplateBox[{RowBox[{"p", ",", 
+       RowBox[{"k", "+", "q"}]}]},
+    "KroneckerDeltaSeq"], 
+   StyleBox["\[CenterDot]",
+    FontColor->RGBColor[0, 1, 0]], 
+   TagBox[
+    StyleBox[
+     TemplateBox[{"a",RowBox[{"k"}],"\"\""},
+      "Subsuperscript"],
+     ScriptSizeMultipliers->1,
+     ScriptBaselineShifts->{1, 1}],
+    DisplayForm]}], "-", 
+  RowBox[{
+   TagBox[
+    StyleBox[
+     TemplateBox[{"a",RowBox[{
+         RowBox[{"k", "+", "q"}]}],"\"\[Dagger]\""},
+      "Subsuperscript"],
+     ScriptSizeMultipliers->1,
+     ScriptBaselineShifts->{1, 1}],
+    DisplayForm], 
+   StyleBox["\[CenterDot]",
+    FontColor->RGBColor[0, 1, 0]], 
+   TemplateBox[{RowBox[{"k", ",", "p"}]},
+    "KroneckerDeltaSeq"], 
+   StyleBox["\[CenterDot]",
+    FontColor->RGBColor[0, 1, 0]], 
+   TagBox[
+    StyleBox[
+     TemplateBox[{"a",RowBox[{"p"}],"\"\""},
+      "Subsuperscript"],
+     ScriptSizeMultipliers->1,
+     ScriptBaselineShifts->{1, 1}],
+    DisplayForm]}]}]], "Output",
+ CellChangeTimes->{3.881260460245022*^9},
+ CellLabel->"Out[15]=",ExpressionUUID->"d9cb61e9-e2d6-47de-a38e-fbc0ec24a681"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"hnn", "=", 
+  RowBox[{"commutator", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"a", "[", 
+       RowBox[{"CR", ",", "p"}], "]"}], "~", "nc", "~", 
+      RowBox[{"a", "[", 
+       RowBox[{"AN", ",", 
+        RowBox[{"p", "-", "q"}]}], "]"}]}], "-", 
+     RowBox[{
+      RowBox[{"a", "[", 
+       RowBox[{"CR", ",", 
+        RowBox[{"p", "+", "q"}]}], "]"}], "~", "nc", "~", 
+      RowBox[{"a", "[", 
+       RowBox[{"AN", ",", "p"}], "]"}]}]}], ",", 
+    RowBox[{
+     RowBox[{"a", "[", 
+      RowBox[{"CR", ",", 
+       RowBox[{"k", "-", "q"}]}], "]"}], "~", "nc", "~", 
+     RowBox[{"a", "[", 
+      RowBox[{"AN", ",", "k"}], "]"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8812605497000093`*^9, 3.881260579418923*^9}, {
+  3.881260809029022*^9, 3.881260809566989*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"8fd8200d-c9ee-45a4-a665-a0a16a536b35"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   TagBox[
+    StyleBox[
+     TemplateBox[{"a",RowBox[{"p"}],"\"\[Dagger]\""},
+      "Subsuperscript"],
+     ScriptSizeMultipliers->1,
+     ScriptBaselineShifts->{1, 1}],
+    DisplayForm], 
+   StyleBox["\[CenterDot]",
+    FontColor->RGBColor[0, 1, 0]], 
+   TemplateBox[{RowBox[{
+       RowBox[{"k", "-", "q"}], ",", 
+       RowBox[{"p", "-", "q"}]}]},
+    "KroneckerDeltaSeq"], 
+   StyleBox["\[CenterDot]",
+    FontColor->RGBColor[0, 1, 0]], 
+   TagBox[
+    StyleBox[
+     TemplateBox[{"a",RowBox[{"k"}],"\"\""},
+      "Subsuperscript"],
+     ScriptSizeMultipliers->1,
+     ScriptBaselineShifts->{1, 1}],
+    DisplayForm]}], "-", 
+  RowBox[{
+   TagBox[
+    StyleBox[
+     TemplateBox[{"a",RowBox[{
+         RowBox[{"k", "-", "q"}]}],"\"\[Dagger]\""},
+      "Subsuperscript"],
+     ScriptSizeMultipliers->1,
+     ScriptBaselineShifts->{1, 1}],
+    DisplayForm], 
+   StyleBox["\[CenterDot]",
+    FontColor->RGBColor[0, 1, 0]], 
+   TemplateBox[{RowBox[{"k", ",", "p"}]},
+    "KroneckerDeltaSeq"], 
+   StyleBox["\[CenterDot]",
+    FontColor->RGBColor[0, 1, 0]], 
+   TagBox[
+    StyleBox[
+     TemplateBox[{"a",RowBox[{
+         RowBox[{"p", "-", "q"}]}],"\"\""},
+      "Subsuperscript"],
+     ScriptSizeMultipliers->1,
+     ScriptBaselineShifts->{1, 1}],
+    DisplayForm]}], "+", 
+  RowBox[{
+   TagBox[
+    StyleBox[
+     TemplateBox[{"a",RowBox[{
+         RowBox[{"k", "-", "q"}]}],"\"\[Dagger]\""},
+      "Subsuperscript"],
+     ScriptSizeMultipliers->1,
+     ScriptBaselineShifts->{1, 1}],
+    DisplayForm], 
+   StyleBox["\[CenterDot]",
+    FontColor->RGBColor[0, 1, 0]], 
+   TemplateBox[{RowBox[{"k", ",", 
+       RowBox[{"p", "+", "q"}]}]},
+    "KroneckerDeltaSeq"], 
+   StyleBox["\[CenterDot]",
+    FontColor->RGBColor[0, 1, 0]], 
+   TagBox[
+    StyleBox[
+     TemplateBox[{"a",RowBox[{"p"}],"\"\""},
+      "Subsuperscript"],
+     ScriptSizeMultipliers->1,
+     ScriptBaselineShifts->{1, 1}],
+    DisplayForm]}], "-", 
+  RowBox[{
+   TagBox[
+    StyleBox[
+     TemplateBox[{"a",RowBox[{
+         RowBox[{"p", "+", "q"}]}],"\"\[Dagger]\""},
+      "Subsuperscript"],
+     ScriptSizeMultipliers->1,
+     ScriptBaselineShifts->{1, 1}],
+    DisplayForm], 
+   StyleBox["\[CenterDot]",
+    FontColor->RGBColor[0, 1, 0]], 
+   TemplateBox[{RowBox[{"p", ",", 
+       RowBox[{"k", "-", "q"}]}]},
+    "KroneckerDeltaSeq"], 
+   StyleBox["\[CenterDot]",
+    FontColor->RGBColor[0, 1, 0]], 
+   TagBox[
+    StyleBox[
+     TemplateBox[{"a",RowBox[{"k"}],"\"\""},
+      "Subsuperscript"],
+     ScriptSizeMultipliers->1,
+     ScriptBaselineShifts->{1, 1}],
+    DisplayForm]}]}]], "Output",
+ CellChangeTimes->{3.881260589110517*^9, 3.881260810606436*^9},
+ CellLabel->"Out[18]=",ExpressionUUID->"6b95f82b-cccc-4841-bdf8-d3aa0f35d755"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"hnn", "/.", 
+   RowBox[{
+    RowBox[{"KroneckerDelta", "[", 
+     RowBox[{
+      RowBox[{"i_", "+", "j_"}], ",", 
+      RowBox[{"k_", "+", "j_"}]}], "]"}], "->", 
+    RowBox[{"KroneckerDelta", "[", 
+     RowBox[{"i", ",", "k"}], "]"}]}]}], "//", "SnegSimplify"}]], "Input",
+ CellChangeTimes->{{3.881260759633494*^9, 3.881260818230043*^9}, {
+  3.881260857796877*^9, 3.88126086941796*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"84d2cc5f-9c13-4bff-9303-76f189864fe9"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   TagBox[
+    StyleBox[
+     TemplateBox[{"a",RowBox[{"p"}],"\"\[Dagger]\""},
+      "Subsuperscript"],
+     ScriptSizeMultipliers->1,
+     ScriptBaselineShifts->{1, 1}],
+    DisplayForm], 
+   StyleBox["\[CenterDot]",
+    FontColor->RGBColor[0, 1, 0]], 
+   TemplateBox[{RowBox[{"k", ",", "p"}]},
+    "KroneckerDeltaSeq"], 
+   StyleBox["\[CenterDot]",
+    FontColor->RGBColor[0, 1, 0]], 
+   TagBox[
+    StyleBox[
+     TemplateBox[{"a",RowBox[{"k"}],"\"\""},
+      "Subsuperscript"],
+     ScriptSizeMultipliers->1,
+     ScriptBaselineShifts->{1, 1}],
+    DisplayForm]}], "-", 
+  RowBox[{
+   TagBox[
+    StyleBox[
+     TemplateBox[{"a",RowBox[{
+         RowBox[{"k", "-", "q"}]}],"\"\[Dagger]\""},
+      "Subsuperscript"],
+     ScriptSizeMultipliers->1,
+     ScriptBaselineShifts->{1, 1}],
+    DisplayForm], 
+   StyleBox["\[CenterDot]",
+    FontColor->RGBColor[0, 1, 0]], 
+   TemplateBox[{RowBox[{"k", ",", "p"}]},
+    "KroneckerDeltaSeq"], 
+   StyleBox["\[CenterDot]",
+    FontColor->RGBColor[0, 1, 0]], 
+   TagBox[
+    StyleBox[
+     TemplateBox[{"a",RowBox[{
+         RowBox[{"p", "-", "q"}]}],"\"\""},
+      "Subsuperscript"],
+     ScriptSizeMultipliers->1,
+     ScriptBaselineShifts->{1, 1}],
+    DisplayForm]}], "+", 
+  RowBox[{
+   TagBox[
+    StyleBox[
+     TemplateBox[{"a",RowBox[{
+         RowBox[{"k", "-", "q"}]}],"\"\[Dagger]\""},
+      "Subsuperscript"],
+     ScriptSizeMultipliers->1,
+     ScriptBaselineShifts->{1, 1}],
+    DisplayForm], 
+   StyleBox["\[CenterDot]",
+    FontColor->RGBColor[0, 1, 0]], 
+   TemplateBox[{RowBox[{"k", ",", 
+       RowBox[{"p", "+", "q"}]}]},
+    "KroneckerDeltaSeq"], 
+   StyleBox["\[CenterDot]",
+    FontColor->RGBColor[0, 1, 0]], 
+   TagBox[
+    StyleBox[
+     TemplateBox[{"a",RowBox[{"p"}],"\"\""},
+      "Subsuperscript"],
+     ScriptSizeMultipliers->1,
+     ScriptBaselineShifts->{1, 1}],
+    DisplayForm]}], "-", 
+  RowBox[{
+   TagBox[
+    StyleBox[
+     TemplateBox[{"a",RowBox[{
+         RowBox[{"p", "+", "q"}]}],"\"\[Dagger]\""},
+      "Subsuperscript"],
+     ScriptSizeMultipliers->1,
+     ScriptBaselineShifts->{1, 1}],
+    DisplayForm], 
+   StyleBox["\[CenterDot]",
+    FontColor->RGBColor[0, 1, 0]], 
+   TemplateBox[{RowBox[{"p", ",", 
+       RowBox[{"k", "-", "q"}]}]},
+    "KroneckerDeltaSeq"], 
+   StyleBox["\[CenterDot]",
+    FontColor->RGBColor[0, 1, 0]], 
+   TagBox[
+    StyleBox[
+     TemplateBox[{"a",RowBox[{"k"}],"\"\""},
+      "Subsuperscript"],
+     ScriptSizeMultipliers->1,
+     ScriptBaselineShifts->{1, 1}],
+    DisplayForm]}]}]], "Output",
+ CellChangeTimes->{{3.8812607971593657`*^9, 3.8812608185543547`*^9}, {
+  3.881260861647543*^9, 3.881260869712791*^9}},
+ CellLabel->"Out[23]=",ExpressionUUID->"7fb73477-e01c-4a08-ba40-dd0c1d604ff1"]
+}, Open  ]]
+},
+WindowSize->{640, 755},
+WindowMargins->{{0, Automatic}, {Automatic, 280}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 220, 3, 30, "Input",ExpressionUUID->"dafebd6d-ed31-4d7a-9781-375cb545f298"],
+Cell[CellGroupData[{
+Cell[803, 27, 151, 3, 30, "Input",ExpressionUUID->"aeb3e827-7287-4ae3-b4d3-9746ef691420"],
+Cell[957, 32, 251, 4, 24, "Print",ExpressionUUID->"b0a3074b-b514-4f99-a468-3cdbb3f79dea"]
+}, Open  ]],
+Cell[1223, 39, 218, 3, 30, "Input",ExpressionUUID->"c788e69c-ea3b-4aaa-a229-1e8c475f78d6"],
+Cell[CellGroupData[{
+Cell[1466, 46, 492, 10, 30, "Input",ExpressionUUID->"f250fde5-1061-414d-8fa6-6109d1bac013"],
+Cell[1961, 58, 720, 23, 41, "Output",ExpressionUUID->"b17a6ecc-a53c-4979-a06e-d909af18722e"]
+}, Open  ]],
+Cell[2696, 84, 172, 4, 30, "Input",ExpressionUUID->"54c5fa98-b885-4336-aaf0-d5babfffb5d3"],
+Cell[CellGroupData[{
+Cell[2893, 92, 558, 15, 30, "Input",ExpressionUUID->"3f3dc7f8-36e6-469b-949f-d30414aac661"],
+Cell[3454, 109, 1381, 47, 44, "Output",ExpressionUUID->"d9cb61e9-e2d6-47de-a38e-fbc0ec24a681"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4872, 161, 891, 25, 52, "Input",ExpressionUUID->"8fd8200d-c9ee-45a4-a665-a0a16a536b35"],
+Cell[5766, 188, 2749, 95, 44, "Output",ExpressionUUID->"6b95f82b-cccc-4841-bdf8-d3aa0f35d755"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8552, 288, 501, 12, 52, "Input",ExpressionUUID->"84d2cc5f-9c13-4bff-9303-76f189864fe9"],
+Cell[9056, 302, 2748, 94, 44, "Output",ExpressionUUID->"7fb73477-e01c-4a08-ba40-dd0c1d604ff1"]
+}, Open  ]]
+}
+]
+*)
+
